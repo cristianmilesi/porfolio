@@ -1,12 +1,33 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Badge from '../components/Badge.astro';
+import LinkedinIcon from '../icons/LinkedinIcon.astro';
+import GithubIcon from '../icons/GithubIcon.astro';
+import SocialPill from '../icons/SocialPill.astro'
+import MailIcon from '../icons/MailIcon.astro';
+import Experience from '../components/Experience.astro';
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Portfolio Web de Cristian Milesi - Desarrollador Web" description="Desarrollador Web Front End React con conocimientos en Back End">
 	<main>
-		<!-- <h1>Hola, soy Cristian Milesi <Badge>Disponible para trabajar</Badge> </h1>
-		<h3>Desarrollador Web Front End. Nacido en Argentina, actualmente viviendo en Italia. Me especializo en la creación de páginas web estáticas y dinámicas. </h3> -->
+		<section class="w-full lg:w-[740px] mx-auto py-44">
+			<h1 class="text-white text-4xl font-bold flex flex-row gap-x-4 pb-4">Hola, soy Cristian Milesi 
+				<a href="https://linkedin.com/in/cristian-milesi" target="blank" rel="noopener" class="flex justify-center items-center"> 
+				<Badge>Disponible para trabajar</Badge></a> 
+			</h1>
+			<h3 class="text-xl opacity-90"> <span class="opacity-90"> Desarrollador Web Front End.</span> <span class="opacity-80 text-yellow-200/100"> Nacido en Argentina, actualmente viviendo en Italia. Me especializo en la creación de páginas web estáticas y dinámicas.</span></h3>
+
+			<nav class="flex gap-x-4 mt-4">
+				<SocialPill href="https://linkedin.com/in/cristian-milesi" > <LinkedinIcon /> LinkedIn </SocialPill>
+				<SocialPill href="https://github.com/cristianmilesi" > <GithubIcon /> GitHub </SocialPill>
+				<SocialPill href="mailto:cristianmilesi.dev@gmail.com" > <MailIcon/> cristianmilesi.dev@gmail.com </SocialPill>
+			</nav>
+
+		</section>
+		<section>
+			<Experience />
+		</section>
+		
 	</main>
 </Layout>
 
