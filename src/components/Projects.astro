@@ -1,0 +1,53 @@
+---
+import HtmlIcon from "../icons/HtmlIcon.astro"
+import CssIcon from "../icons/CssIcon.astro"
+
+const TAGS = {
+
+    HTML: {
+        name:"HTML",
+        class: "bg-black text-white",
+        icon: HtmlIcon,
+    },
+    CSS: {
+        name:"CSS",
+        class: "bg-[#003159] text-white",
+        icon: CssIcon,
+    },
+    
+}
+
+const PROJECTS = [
+    {
+        title: 'Cálido: accesorios para mascotas',
+        description: 'Diseño y desarrollo desde cero de Página web para comercio dedicado a la venta de accesorios de diseño para mascotas. Proyecto final del curso de Desarrollo Web de Coderhouse',
+        link: 'https://calidomascotas.netlify.app/',
+        github: 'https://github.com/cristianmilesi/Calido_CristianMilesi.git',
+        image: '/img/calido_project.webp',
+        tags: [TAGS.HTML, TAGS.CSS]
+    },
+]
+---
+
+<div class="flex flex-col gap-y-16 px-6">
+{
+    PROJECTS.map(({title, description, tags, image, link, github}) => (
+       <article>
+        <h3 class="text-3-xl font-semibold text-yellow-200 mb-2"> {title}</h3>
+        <p class="text-lg mb-2 text-pretty">{description}</p>
+        <ul class="flex gap-x-2 flex-row">
+            {tags.map((tag)=>(
+                <li>
+                    <span class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2`}>
+                    <tag.icon class="size-6" />
+                    {tag.name}
+                    </span>
+                </li>
+                ))}
+            </ul>
+            <img class="rounded shadow-2xl shadow-white/15"src={image} alt= {`Captura de Pantalla del Proyecto ${image}`}/>
+        </article> 
+    )
+    )
+}
+</div>

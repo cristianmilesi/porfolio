@@ -1,5 +1,6 @@
 ---
 import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro'
 import '@fontsource/lato'
 Header
 interface Props {
@@ -26,6 +27,7 @@ const { description, title } = Astro.props;
 		</div>
 		<Header />
 		<slot />
+		<Footer /> 
 	</body>
 </html>
 <style is:global>
@@ -36,13 +38,21 @@ const { description, title } = Astro.props;
 		background: #242424; 
 		font-family: 'Lato', sans-serif;
 		color: rgb(255, 253, 246);
+		scroll-behavior: smooth;
 	}
 	
 	body{
 		
 		display: flex;
 		flex-direction: column;
-		height: 100vh;
+		min-height: 100vh;
 
 	}
+
+	@media (prefers-reduced-motion: reduce){
+		html {
+			scroll-behavior: auto;
+		}
+	} 
+
 </style>
