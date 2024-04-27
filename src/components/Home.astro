@@ -1,0 +1,28 @@
+---
+import GithubIcon from '../icons/GithubIcon.astro'
+import LinkedinIcon from '../icons/LinkedinIcon.astro'
+import MailIcon from '../icons/MailIcon.astro'
+import SocialPill from '../icons/SocialPill.astro'
+import Badge from './Badge.astro'
+
+---
+
+<div class="flex flex-row gap-x-4">
+    <div class="flex flex-col w-[30%] justify-center items-center">
+        <img class=" rounded-full " src="https://res.cloudinary.com/dx4kaqyx0/image/upload/v1711480823/Portfolio/Foto_5_adexj9.jpg" alt="Foto personal Cristian Milesi">
+    </div>
+    
+    <div class="flex flex-col w-[70%] text-grayolive-950 ">
+        <h1 class="text-3xl md:4xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10">Hola, soy Cristian Milesi 
+        
+        <a href="https://linkedin.com/in/cristian-milesi" target="blank" rel="noopener" class="flex justify-center items-center"> 
+        <Badge>Disponible para trabajar</Badge></a> 
+        </h1>
+        <h3 class="lg:text-2xl text-xl opacity-90 text-wrap max-w-[800px]"> <span class="opacity-90"> Desarrollador Web Front End.</span> <span class="opacity-80 text-patina-600/90"> Nacido en Argentina, actualmente viviendo en Italia. Me especializo en la creación de páginas web estáticas y dinámicas.</span></h3>
+        <nav class="flex gap-2 mt-6 flex-wrap">
+            <SocialPill href="https://linkedin.com/in/cristian-milesi" > <LinkedinIcon class="size-4 md:size-6"/> LinkedIn </SocialPill>
+            <SocialPill href="https://github.com/cristianmilesi" > <GithubIcon class="size-4 md:size-6"/> GitHub </SocialPill>
+            <SocialPill href="mailto:cristianmilesi.dev@gmail.com" > <MailIcon class="size-4 md:size-6"/> cristianmilesi.dev@gmail.com </SocialPill>
+        </nav>
+    </div>
+</div>

@@ -1,12 +1,15 @@
 ---
 import HtmlIcon from "../icons/HtmlIcon.astro"
 import CssIcon from "../icons/CssIcon.astro"
+import ReactIcon from "../icons/ReactIcon.astro"
+import TailwindIcon from "../icons/TailwindIcon.astro"
+import LinkIcon from "../icons/LinkIcon.astro"
 
 const TAGS = {
 
     HTML: {
         name:"HTML",
-        class: "bg-black text-white",
+        class: "bg-grayolive-950 text-white",
         icon: HtmlIcon,
     },
     CSS: {
@@ -14,7 +17,16 @@ const TAGS = {
         class: "bg-[#003159] text-white",
         icon: CssIcon,
     },
-    
+    REACT: {
+        name:"REACTJS",
+        class: "bg-[#087ca3] text-white",
+        icon: ReactIcon,
+    },
+    TAILWIND: {
+        name:"TAILWIND",
+        class: "bg-[#39bef7] text-white",
+        icon: TailwindIcon,
+    },
 }
 
 const PROJECTS = [
@@ -26,26 +38,44 @@ const PROJECTS = [
         image: '/img/calido_project.webp',
         tags: [TAGS.HTML, TAGS.CSS]
     },
+    {
+        title: '+AGUA: gestión sostenible e ingeniería sanitaria',
+        description: 'Diseño y desarrollo de Página web empresarial a partir de material gráfico facilitado. El proyecto fue realizado desde cero teniendo en cuenta las mejores prácticas de SEO. Diseño responsive y mobile first.',
+        link: 'https://masaguaingenieria.com/',
+        github: '',
+        image: '/img/MasAgua_project.webp',
+        tags: [TAGS.REACT, TAGS.TAILWIND]
+    },
 ]
 ---
 
-<div class="flex flex-col gap-y-16 px-6">
+<div class="flex flex-col gap-y-10 ">
 {
     PROJECTS.map(({title, description, tags, image, link, github}) => (
-       <article>
-        <h3 class="text-3-xl font-semibold text-yellow-200 mb-2"> {title}</h3>
-        <p class="text-lg mb-2 text-pretty">{description}</p>
+       <article class="flex items-center gap-x-4">
+        <div class="flex-1">
+        <h3 class="text-2xl font-semibold text-patina-700"> {title}</h3>
         <ul class="flex gap-x-2 flex-row">
             {tags.map((tag)=>(
                 <li>
-                    <span class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2`}>
+                    <span class={`flex gap-x-2 rounded-full text-xs ${tag.class} items-center my-2 py-1 px-2`}>
                     <tag.icon class="size-6" />
                     {tag.name}
                     </span>
                 </li>
                 ))}
             </ul>
+        <p class="text-lg text-grayolive-900 mb-2 text-pretty">{description}</p>
+        <a href={link} target="_blank">
+       <div class="flex p-2 gap-2 w-fit rounded-3xl bg-grayolive-950/90 text-patina-100">
+        <LinkIcon />
+        <h4>IR A WEB</h4>
+       </div>
+        </a>
+        </div>
+        <div class="p-2 w-[50%] ">
             <img class="rounded shadow-2xl shadow-white/15"src={image} alt= {`Captura de Pantalla del Proyecto ${image}`}/>
+        </div>
         </article> 
     )
     )

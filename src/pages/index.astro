@@ -10,40 +10,36 @@ import SectionContainer from '../components/SectionContainer.astro';
 import Case from '../icons/Case.astro';
 import CodeIcon from '../icons/CodeIcon.astro';
 import Projects from '../components/Projects.astro';
+import SobreMi from '../components/SobreMi.astro'
+import Home from '../components/Home.astro';
 ---
 
 <Layout title="Portfolio Web de Cristian Milesi - Desarrollador Web" description="Desarrollador Web Front End React con conocimientos en Back End">
 	<main class="px-4">
-		<SectionContainer class="py-24 pb-18">
-			<h1 class="text-white text-2xl md:4xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10">Hola, soy Cristian Milesi 
-				
-				<a href="https://linkedin.com/in/cristian-milesi" target="blank" rel="noopener" class="flex justify-center items-center"> 
-				<Badge>Disponible para trabajar</Badge></a> 
-			</h1>
-			<h3 class="lg:text-2xl text-xl opacity-90 text-wrap max-w-[800px]"> <span class="opacity-90"> Desarrollador Web Front End.</span> <span class="opacity-80 text-yellow-200/100"> Nacido en Argentina, actualmente viviendo en Italia. Me especializo en la creación de páginas web estáticas y dinámicas.</span></h3>
-
-			<nav class="flex gap-4 mt-8 flex-wrap">
-				<SocialPill href="https://linkedin.com/in/cristian-milesi" > <LinkedinIcon class="size-4 md:size-6"/> LinkedIn </SocialPill>
-				<SocialPill href="https://github.com/cristianmilesi" > <GithubIcon class="size-4 md:size-6"/> GitHub </SocialPill>
-				<SocialPill href="mailto:cristianmilesi.dev@gmail.com" > <MailIcon class="size-4 md:size-6"/> cristianmilesi.dev@gmail.com </SocialPill>
-			</nav>
-
+		<SectionContainer id="home" class="py-24 pb-18">
+		<Home />
 		</SectionContainer>
 
 		<SectionContainer id="experiencia">
-			<h2 class="text-3xl font-semibold  mb-6 flex gap-x-3 items-center">
+			<h2 class="text-3xl font-semibold  mb-6 flex gap-x-3 items-center text-grayolive-950">
 				<Case class="size-8" />
 				Experiencia laboral</h2>
 			<Experience />
 		</SectionContainer>
 
 		<SectionContainer id="proyectos">
-			<h2 class="text-3xl font-semibold  mb-6 flex gap-x-3 items-center">
+			<h2 class="text-3xl font-semibold  mb-6 flex gap-x-3 items-center text-grayolive-950">
 				<CodeIcon class="size-8" />
 				Proyectos</h2>
 			<Projects />
 		</SectionContainer>
 		
+		<SectionContainer id="sobre-mi">
+			<h2 class="text-3xl text-grayolive-950 font-semibold  mb-6 flex gap-x-3 items-center">
+				<CodeIcon class="size-8" />
+				Sobre mi</h2>
+			<SobreMi />
+		</SectionContainer>
 	</main>
 </Layout>
 
