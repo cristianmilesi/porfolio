@@ -4,12 +4,17 @@ import CssIcon from "../icons/CssIcon.astro"
 import ReactIcon from "../icons/ReactIcon.astro"
 import TailwindIcon from "../icons/TailwindIcon.astro"
 import LinkIcon from "../icons/LinkIcon.astro"
+import BootstrapIcon from "../icons/BootstrapIcon.astro"
+import JSIcon from "../icons/JSIcon.astro"
+import SassIcon from "../icons/SassIcon.astro"
+import FirebaseIcon from "../icons/FirebaseIcon.astro"
+import GithubIcon from "../icons/GithubIcon.astro"
 
 const TAGS = {
 
     HTML: {
         name:"HTML",
-        class: "bg-grayolive-950 text-white",
+        class: "bg-[#de4c23] text-white",
         icon: HtmlIcon,
     },
     CSS: {
@@ -27,17 +32,29 @@ const TAGS = {
         class: "bg-[#39bef7] text-white",
         icon: TailwindIcon,
     },
+    BOOTSTRAP: {
+        name:"BOOTSTRAP",
+        class: "bg-[#7911f7] text-white",
+        icon: BootstrapIcon,
+    },
+    JAVASCRIPT: {
+        name:"JAVASCRIPT",
+        class: "bg-[#e8d34d] text-white",
+        icon: JSIcon,
+    },
+    SASS: {
+        name:"SASS",
+        class: "bg-[#cf6399] text-white",
+        icon: SassIcon,
+    },
+    FIREBASE: {
+        name:"FIREBASE",
+        class: "bg-[#ffcb30] text-white",
+        icon: FirebaseIcon,
+    },
 }
 
 const PROJECTS = [
-    {
-        title: 'Cálido: accesorios para mascotas',
-        description: 'Diseño y desarrollo desde cero de Página web para comercio dedicado a la venta de accesorios de diseño para mascotas. Proyecto final del curso de Desarrollo Web de Coderhouse',
-        link: 'https://calidomascotas.netlify.app/',
-        github: 'https://github.com/cristianmilesi/Calido_CristianMilesi.git',
-        image: '/img/calido_project.webp',
-        tags: [TAGS.HTML, TAGS.CSS]
-    },
     {
         title: '+AGUA: gestión sostenible e ingeniería sanitaria',
         description: 'Diseño y desarrollo de Página web empresarial a partir de material gráfico facilitado. El proyecto fue realizado desde cero teniendo en cuenta las mejores prácticas de SEO. Diseño responsive y mobile first.',
@@ -46,37 +63,73 @@ const PROJECTS = [
         image: '/img/MasAgua_project.webp',
         tags: [TAGS.REACT, TAGS.TAILWIND]
     },
+
+    {
+        title: 'Cálido: accesorios para mascotas',
+        description: 'Diseño y desarrollo desde cero de Página web para comercio dedicado a la venta de accesorios de diseño para mascotas. Proyecto final del curso de Desarrollo Web de Coderhouse',
+        link: 'https://calidomascotas.netlify.app/',
+        github: 'https://github.com/cristianmilesi/Calido_CristianMilesi.git',
+        image: '/img/calido_project.webp',
+        tags: [TAGS.HTML, TAGS.CSS, TAGS.BOOTSTRAP, TAGS.SASS]
+    },
+    
+    {
+        title: 'MusicMart: Proyecto de E-commerce',
+        description: 'Proyecto de desarrollo web de E-commerce (simulado) desde cero en React. realizado como trabajo final del curso de ReactJS de Coderhouse.',
+        link: 'https://e-commerce-music.vercel.app/',
+        github: 'https://github.com/cristianmilesi/React_Coderhouse.git',
+        image: '/img/musicmart_project.webp',
+        tags: [TAGS.REACT, TAGS.CSS, TAGS.FIREBASE]
+    },
+    {
+        title: 'Calido: Catálogo y creador de pedido',
+        description: 'Proyecto de creación de un catálogo de productos, con la posibilidad de agregar productos personalizados, seleccionando sus características. Incluye una simulación de carrito de compras.',
+        link: 'https://calidocatalogo.netlify.app/#',
+        github: 'https://github.com/cristianmilesi/Catalogo_Calido.git',
+        image: '/img/catalogocalido_project.webp',
+        tags: [TAGS.JAVASCRIPT, TAGS.CSS, TAGS.HTML]
+    },
 ]
 ---
 
 <div class="flex flex-col gap-y-10 ">
 {
     PROJECTS.map(({title, description, tags, image, link, github}) => (
-       <article class="flex items-center gap-x-4">
+        <div class="md:flex md:gap-x-6 md:items-center ">
         <div class="flex-1">
-        <h3 class="text-2xl font-semibold text-patina-700"> {title}</h3>
-        <ul class="flex gap-x-2 flex-row">
+            <h3 class="text-xl font-semibold text-patina-700 my-2"> {title}</h3>
+             <ul class="flex gap-x-2 flex-row my-2">
             {tags.map((tag)=>(
                 <li>
-                    <span class={`flex gap-x-2 rounded-full text-xs ${tag.class} items-center my-2 py-1 px-2`}>
-                    <tag.icon class="size-6" />
+                    <span class={`flex gap-x-1 rounded-full text-xs ${tag.class} items-center my- py-1 px-1`}>
+                    <tag.icon class="size-5" />
                     {tag.name}
                     </span>
                 </li>
                 ))}
             </ul>
-        <p class="text-lg text-grayolive-900 mb-2 text-pretty">{description}</p>
-        <a href={link} target="_blank">
-       <div class="flex p-2 gap-2 w-fit rounded-3xl bg-grayolive-950/90 text-patina-100">
-        <LinkIcon />
-        <h4>IR A WEB</h4>
-       </div>
-        </a>
+            <p class="text-lg text-grayolive-900 mb-2 text-pretty">{description}</p>
+            <div class="flex flex-row gap-4">
+                <a href={link} target="_blank">
+                <div class="flex py-1.5 px-2 text-base gap-1 w-fit rounded-3xl bg-grayolive-950/90 text-patina-100 hover:text-patina-50 hover:scale-105 transition-all duration-500" >
+                <LinkIcon />
+                <h4>IR A WEB</h4>
+                </div>
+                </a>
+                {github && (<a href={github} target="_blank">
+                <div class="flex p-1 px-2 text-base gap-1 w-fit rounded-3xl bg-grayolive-950/90 text-patina-100 hover:text-patina-50 hover:scale-105 transition-all duration-500" >
+                <GithubIcon />
+                <h4>GITHUB</h4>
+                </div>
+                </a>)}
+                
+            </div>
+            
         </div>
-        <div class="p-2 w-[50%] ">
-            <img class="rounded shadow-2xl shadow-white/15"src={image} alt= {`Captura de Pantalla del Proyecto ${image}`}/>
+        <div class="mt-4 md:w-[50%] ">
+            <img class="rounded shadow-2xl shadow-white/15 hover:scale-110 transition-all duration-500"src={image} alt= {`Captura de Pantalla del Proyecto ${image}`}/>
         </div>
-        </article> 
+        </div>
     )
     )
 }

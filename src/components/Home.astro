@@ -7,19 +7,23 @@ import Badge from './Badge.astro'
 
 ---
 
-<div class="flex flex-row gap-x-4">
-    <div class="flex flex-col w-[30%] justify-center items-center">
-        <img class=" rounded-full " src="https://res.cloudinary.com/dx4kaqyx0/image/upload/v1711480823/Portfolio/Foto_5_adexj9.jpg" alt="Foto personal Cristian Milesi">
+<div class="flex flex-row gap-x-4 justify-center">
+    <div class="hidden md:flex flex-col w-[30%] justify-center items-center">
+        <img class=" rounded-full " src="https://res.cloudinary.com/dx4kaqyx0/image/upload/v1714368368/Portfolio/Foto_5_Web_fohhfd.webp" alt="Foto personal Cristian Milesi">
     </div>
     
-    <div class="flex flex-col w-[70%] text-grayolive-950 ">
-        <h1 class="text-3xl md:4xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10">Hola, soy Cristian Milesi 
+    <div class="flex flex-col md:w-[70%] text-grayolive-950 ">
+        <div class="flex flex-row md:flex-col gap-6 md:gap-3 w-[100%] items-center">
+            <img class="md:hidden w-[30%] rounded-full " src="https://res.cloudinary.com/dx4kaqyx0/image/upload/v1714385490/Portfolio/Foto_5_WebMob_rmnwjt.jpg" alt="Foto personal Cristian Milesi">
+            <h1 class="text-xl md:w-full md:text-3xl font-bold py-2 flex flex-col md:flex-row gap-x-5 pb-4 md:pb-2 lg:pb-4">Hola, soy Cristian Milesi 
         
-        <a href="https://linkedin.com/in/cristian-milesi" target="blank" rel="noopener" class="flex justify-center items-center"> 
-        <Badge>Disponible para trabajar</Badge></a> 
-        </h1>
-        <h3 class="lg:text-2xl text-xl opacity-90 text-wrap max-w-[800px]"> <span class="opacity-90"> Desarrollador Web Front End.</span> <span class="opacity-80 text-patina-600/90"> Nacido en Argentina, actualmente viviendo en Italia. Me especializo en la creación de páginas web estáticas y dinámicas.</span></h3>
-        <nav class="flex gap-2 mt-6 flex-wrap">
+                <a href="https://linkedin.com/in/cristian-milesi" target="blank" rel="noopener" class="flex items-center"> 
+                <Badge>Disponible para trabajar</Badge></a> 
+                </h1>
+        </div>
+        
+        <h3 class=" md:text-2xl text-lg text-pretty opacity-95 p-1"> <span> Desarrollador Web Front End.</span> <span class=" text-patina-600/90"> Nacido en Argentina, actualmente viviendo en Italia. Me especializo en la creación de páginas web estáticas y dinámicas.</span></h3>
+        <nav class="flex gap-2 mt-3 md:mt6 flex-wrap">
             <SocialPill href="https://linkedin.com/in/cristian-milesi" > <LinkedinIcon class="size-4 md:size-6"/> LinkedIn </SocialPill>
             <SocialPill href="https://github.com/cristianmilesi" > <GithubIcon class="size-4 md:size-6"/> GitHub </SocialPill>
             <SocialPill href="mailto:cristianmilesi.dev@gmail.com" > <MailIcon class="size-4 md:size-6"/> cristianmilesi.dev@gmail.com </SocialPill>
