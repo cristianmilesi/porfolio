@@ -1,0 +1,15 @@
+.experiencia {
+  animation: reveal 2s linear both;
+  animation-timeline: view();
+  animation-range: entry 10% cover 25%;
+}
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

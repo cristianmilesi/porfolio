@@ -1,0 +1,45 @@
+.headerMenu {
+  animation: header-out 3s ease-in-out;
+  animation-timeline: scroll(root);
+  animation-fill-mode: both;
+  animation-range: 0 250px;
+}
+
+.menuLateral {
+  border-radius: 0 25px 25px 0;
+  position: fixed;
+  top: 200px;
+  left: 0px;
+  z-index: 50;
+
+  animation: menu-in 2s ease-in-out;
+  animation-timeline: scroll(root);
+  animation-range: 0 250px;
+}
+
+@keyframes menu-in {
+  from {
+    transform: translateX(-50px);
+  }
+
+  to {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes header-out {
+  from {
+    transform: translateY(0px);
+  }
+
+  to {
+    transform: translateY(-200px);
+    scale: 0.5;
+  }
+}
+
+@keyframes change-header {
+  to {
+    display: flex;
+  }
+}
