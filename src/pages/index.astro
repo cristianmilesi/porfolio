@@ -1,10 +1,5 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Badge from '../components/Badge.astro';
-import LinkedinIcon from '../icons/LinkedinIcon.astro';
-import GithubIcon from '../icons/GithubIcon.astro';
-import SocialPill from '../icons/SocialPill.astro'
-import MailIcon from '../icons/MailIcon.astro';
 import Experience from '../components/Experience.astro';
 import SectionContainer from '../components/SectionContainer.astro';
 import Case from '../icons/Case.astro';
@@ -22,24 +17,24 @@ import './index.css'
 		<Home />
 		</SectionContainer>
 
-		<SectionContainer id="proyectos">
+		<SectionContainer id="projects">
 			<h2 class="text-3xl font-semibold  mb-6 flex gap-x-3 items-center text-grayolive-950">
 				<CodeIcon class="size-8" />
-				Proyectos</h2>
+				Projects</h2>
 			<Projects />
 		</SectionContainer>
 		
-		<SectionContainer id="experiencia">
+		<SectionContainer id="experience">
 			<h2 class="text-3xl font-semibold  mb-6 flex gap-x-3 items-center text-grayolive-950">
 				<Case class="size-8" />
-				Experiencia laboral</h2>
+				Job Experience</h2>
 			<Experience />
 		</SectionContainer>
 
-		<SectionContainer id="sobre-mi">
+		<SectionContainer id="about-me">
 			<h2 class="text-3xl text-grayolive-950 font-semibold  mb-6 flex gap-x-3 items-center">
 				<SobreMiIcon class="size-8" />
-				Sobre mi</h2>
+				About me</h2>
 			<SobreMi />
 		</SectionContainer>
 	</main>
