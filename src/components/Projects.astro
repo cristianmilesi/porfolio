@@ -9,7 +9,7 @@ import JSIcon from "../icons/JSIcon.astro"
 import SassIcon from "../icons/SassIcon.astro"
 import FirebaseIcon from "../icons/FirebaseIcon.astro"
 import GithubIcon from "../icons/GithubIcon.astro"
-import './projects.css'
+import TypescriptIcon from "../icons/TSIcon.astro"
 
 const TAGS = {
 
@@ -53,18 +53,39 @@ const TAGS = {
         class: "bg-[#ffcb30] text-white",
         icon: FirebaseIcon,
     },
+    TYPESCRIPT: {
+        name:"TYPESCRIPT",
+        class: "bg-[#007acc] text-white",
+        icon: TypescriptIcon,
+    },
 }
 
 const PROJECTS = [
     {
+        title: 'Tata Milesi: Singer-songwriter website',
+        description: 'Designed and developed a fully responsive and SEO-optimized website, implementing internationalization (i18n) to support multiple languages. Focused on accessibility and performance, with dynamic content loading and a mobile-first approach.',
+        link: 'https://tatamilesi.musica.ar/',
+        github: 'https://github.com/cristianmilesi/tatamilesiweb',
+        image: '/img/capture-tatamilesi.webp',
+        tags: [TAGS.REACT, TAGS.TAILWIND, TAGS.TYPESCRIPT]
+    },
+    {
         title: '+AGUA: Sustainable Management and Sanitary Engineering',
-        description: 'Designed and developed a corporate website from provided graphic materials. Built from scratch with a focus on SEO best practices. Implemented a responsive, mobile-first design approach.',
+        description: 'Design and developent a corporate website from provided graphic materials. Built from scratch with a focus on SEO best practices. Implemented a responsive, mobile-first design approach.',
         link: 'https://masaguaingenieria.com/',
         github: '',
         image: '/img/MasAgua_project.webp',
         tags: [TAGS.REACT, TAGS.TAILWIND]
     },
-
+  
+    {
+        title: 'MusicMart: E-commerce Project',
+        description: 'Developed an e-commerce website from scratch using React. Completed as the final project for the Coderhouse ReactJS course.',
+        link: 'https://e-commerce-music.vercel.app/',
+        github: 'https://github.com/cristianmilesi/React_Coderhouse.git',
+        image: '/img/musicmart_project.webp',
+        tags: [TAGS.REACT, TAGS.CSS, TAGS.FIREBASE]
+    },
     {
         title: 'Cálido: Pet Accessories',
         description: 'Design and development from scratch of a website for a store dedicated to the sale of design accessories for pets. Final project of the Coderhouse Web Development course.',
@@ -74,14 +95,6 @@ const PROJECTS = [
         tags: [TAGS.HTML, TAGS.CSS, TAGS.BOOTSTRAP, TAGS.SASS]
     },
     
-    {
-        title: 'MusicMart: E-commerce Project',
-        description: 'Developed an e-commerce website from scratch using React. Completed as the final project for the Coderhouse ReactJS course.',
-        link: 'https://e-commerce-music.vercel.app/',
-        github: 'https://github.com/cristianmilesi/React_Coderhouse.git',
-        image: '/img/musicmart_project.webp',
-        tags: [TAGS.REACT, TAGS.CSS, TAGS.FIREBASE]
-    },
     {
         title: 'Calido: Catalog and order builder',
         description: 'Designed a product catalog with customizable options and a simulated shopping cart feature.',
